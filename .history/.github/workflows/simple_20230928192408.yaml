@@ -1,0 +1,10 @@
+name: shell commands
+
+on: [push] #when we do a push, this work will be trigger. ADD the job below
+
+jobs:   
+  run-shell-command: #what are script are you tring to run 
+    runs-on: ubuntu-18.04 # what image are you trying to run. 
+    steps: #what are that step you want git to take
+      - name: checkout # This is git checkout. this is also similar to git clone
+        users: 

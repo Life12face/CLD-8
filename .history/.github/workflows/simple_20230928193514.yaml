@@ -1,0 +1,14 @@
+name: shell commands
+
+on: [push] #when we do a push, this work will be trigger. ADD the job below
+
+jobs:   
+  run-shell-command: #what are script are you tring to run 
+    runs-on: ubuntu-18.04 # what image are you trying to run. 
+    steps: #what are that step you want git to take
+      - name: checkout # This is git checkout. this is also similar to git clone, git will clone your repo in your VM which is git default machine 
+        users: actions/checkout@v3 #git custom action that checkout your code inside ur VM.  
+      -  name: echo string # We want to run this on a string
+         run: echo " Hello world" #Remember Githhub os an SAAC and runs on servers. which it uses to run on UR work. 
+       - run: |
+          node 

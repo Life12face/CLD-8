@@ -1,0 +1,5 @@
+name: shell commands
+
+on: [push] #when we do a push, 
+
+jobs: 
