@@ -20,10 +20,9 @@ jobs:
         run: |
           node -v
           npm -v
-
   run-windows-commands:
     runs-on: windows-latest
-    needs: ["run-shell-command"] # Ensure the previous job runs before this one.
+    needs: ["run-shell-command"] #Which means that the above job will run first before the python job below. 
     steps:
       - name: Directory
         run: |
@@ -36,4 +35,3 @@ jobs:
           echo "Present working directory (Bash):"
           pwd
         shell: bash
-

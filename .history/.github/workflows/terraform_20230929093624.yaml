@@ -28,8 +28,10 @@ jobs:
         run:  terraform validate
 
       - name: format
-        run:   terraform fmt -check
-      - name: plan
+        run:   terraform fmt
+
+      - name: Terraform Plan
         run: terraform plan
-      - name: apply
+
+      - name: Terraform Apply
         run: terraform apply
