@@ -25,10 +25,10 @@ jobs:
         run: terraform init
 
       - name: Terraform Validate
-        run:  terraform validate
+        run: validate
 
       - name: Terraform Format Check
-        run:   terraform fmt
+        run: t fmt 
 
       - name: Terraform Plan
         run: terraform plan
