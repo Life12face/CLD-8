@@ -1,7 +1,0 @@
-name: "Terraform"
-
-on: [push]
-
-jobs: 
- terraform: 
- runs-on: 

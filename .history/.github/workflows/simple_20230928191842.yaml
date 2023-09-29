@@ -1,6 +1,0 @@
-name: shell commands
-
-on: [push] #when we do a push, this work will be trigger. ADD the job below
-
-jobs:   
-  run 
