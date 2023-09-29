@@ -7,6 +7,7 @@ resource "aws_instance" "sekouEC2" {
   instance_type = "t2.micro"
 }
 
+
 resource "aws_vpc" "Sekou-test"{
     cidr = "10.0.0.0/16"
     tag = {
