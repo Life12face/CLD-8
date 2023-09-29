@@ -1,10 +1,11 @@
 name: Shell Commands
 
+name: Validate changes
 
 on:
   push:
-    branches:
-      - main
+    branches-ignore:
+      - 'main'
 
 jobs:
   run-shell-command:
