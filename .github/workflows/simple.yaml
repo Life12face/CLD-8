@@ -3,20 +3,39 @@ name: Shell Commands
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   run-shell-command:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2 
-        
+        uses: actions/checkout@v2
+
       - name: Echo String
-        run: echo "Hello world" 
+        run: echo "Hello world"
 
       - name: Check Node.js and npm Versions
         run: |
           node -v
           npm -v
+
+      - name: Python Command
+        run: |
+          python -c "import platform; print(platform.processor())"
+
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory
+        run: |
+          echo "Present working directory:"
+          cd
+          pwd
+
+      - name: Directory in Bash
+        run: |
+          echo "Present working directory (Bash):"
+          pwd
+        shell: bash
