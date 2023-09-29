@@ -5,5 +5,5 @@ resource "aws_vpc" "test" {
 
   tags = {
     Name = "Action-test"
-  }
+}
 }
