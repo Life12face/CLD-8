@@ -27,7 +27,7 @@ jobs:
 
   run-windows-commands:
     runs-on: windows-latest
-    needs: ["run-shell-command"] #Which intials that the above job must run first before the python job. 
+    needs: ["run-shell-command"] #Which means that the above job will run first before the python job below. 
     steps:
       - name: Directory
         run: |
