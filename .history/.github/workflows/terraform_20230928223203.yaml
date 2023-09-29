@@ -1,16 +1,17 @@
+
 name: Terraform
 
 on:
   push:
+  env: 
+    AWS_ACCESS_KEY_ID: ${{secret.ACCESS_KEY}}
+    AWS
     branches:
       - main # Adjust the branch as needed
 
 jobs:
   terraform:
     runs-on: ubuntu-latest
-    env: 
-      AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
-      AWS_SECRET_ACCESS_KEY: ${{secrets.ACTION_SECRET_KEY}}
 
     steps:
       - name: Checkout
@@ -35,3 +36,6 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply
+
+
+   #THIS IS TO SETUP TERRAFORM IN YOUR LOCAL ENVIRONMENT
